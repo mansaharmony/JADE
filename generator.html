@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Just A Digital Experience - Image Generator</title>
+</head>
+<body>
+    <header>
+        <h1>Just A Digital Experience - Image Generator</h1>
+    </header>
+    <main>
+        <div class="form-group">
+            <label for="queryInput">Prompt:</label>
+            <input type="text" id="queryInput" placeholder="Enter your prompt" required>
+        </div>
+
+        <div class="form-group">
+            <label for="resolutionSelect">Resolution:</label>
+            <select id="resolutionSelect">
+                <option value="1024x768">1024 x 768</option>
+                <option value="800x600">800 x 600</option>
+                <option value="640x480">640 x 480</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="imageStyleSelect">Style:</label>
+            <input type="text" id="imageStyleSelect" placeholder="Enter style (optional)">
+        </div>
+
+        <div class="form-group">
+            <label for="negativePromptInput">Negative Prompt:</label>
+            <input type="text" id="negativePromptInput" placeholder="Enter negative prompt (optional)">
+        </div>
+
+        <button id="generateButton" onclick="submitQuery()">Generate Image</button>
+        <div id="loading-spinner" style="display: none;">Loading...</div>
+        <img id="generatedImage" style="display: none; margin-top: 20px;" alt="Generated Image">
+        <button id="downloadButton" style="display: none;" onclick="downloadImage()">Download Image</button>
+        <div id="responseText"></div>
+    </main>
+    <footer>
+        <p>Transforming creativity into visuals - one prompt at a time!</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
